@@ -1,0 +1,43 @@
+https://developer.mozilla.org/ko/docs/Web/HTTP/Messages
+
+http 통신규약
+서버와 클라이언트 간에 데이터가 교환되는 방식
+컴퓨터와 컴퓨터가 통신할 때 혹은 서버와 다른 디바이스들이 통신 할때
+서로 다른 방법 / 형식으로 통신 할 경우 각자 다른 방식으로 해석하고 적용해야하므로
+효율성이 떨어짐 그래서 통신 규약으로 통신 시 형식을 통일 시켜 효율성을 높이 고자 했음.
+
+크게
+request / response 두가지 타입이 있음.
+
+http 메시지는 ASCII 인코딩된 텍스트 정보이며 여러 줄로 되어 있음.
+ASCII -> 아스키 코드 미국 정보 교환 표준 부호
+
+아스키 코드는 미국 ANSI에서 표준화된 정보교환용 7비트 부호체계이다. 000(0x00)부터 127(0x7F)까지 총 128개의 부호가 사용된다.
+
+ANSI 미국 국립 표준 협회(American National Standard Institute) 미국의 산업 표준을 제장하는 민간단체이면 국체 표준화 기구 ISO에 가입되어 있다.
+여기서 제장된 표준을 ANSI라고 부르기도 한다. 여기서 제정한 것 중 제일 유명한 것이 ASCII 코드 이다.
+
+영문 키보드로 입력할 수 있는 모든 기호들이 할당 되어 있는 부호 체계이며, 매우 단순하고 간단하여 어느 시스템에서도 적용가능하다는 장점이 있지만 2바이트 이상의 코드를
+표현할 수 없기 때문에 국제 표준은 유니코드에게 넘어 갔다.
+
+requests_toolbelt MultipartEncoder
+https://toolbelt.readthedocs.io/en/latest/user.html
+
+파이썬 리퀘스트의 유틸리티 모음집, 하지만 파이선 requests에 제대로 속하진 않는다.
+
+주요 긴능은 멀티파트 폼테이터를 보내는 것 MultipartEncoder이다.
+
+from requests_toolbelt import MultipartEncoder
+import requests
+
+m = MultipartEncoder(
+    fields={'field0': 'value', 'field1': 'value',
+            'field2': ('filename', open('file.py', 'rb'), 'text/plain')}
+    )
+
+r = requests.post('http://httpbin.org/post', data=m,
+                  headers={'Content-Type': m.content_type})
+
+이런식으로 사용한다.
+
+또한 파일을 여러개 보낼경우도 사용할 수 있다.
