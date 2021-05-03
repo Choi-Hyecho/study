@@ -41,3 +41,38 @@ r = requests.post('http://httpbin.org/post', data=m,
 이런식으로 사용한다.
 
 또한 파일을 여러개 보낼경우도 사용할 수 있다.
+
+Content-Type : multipart/form-data; boundary ->
+
+네트워크를 통해 메시지 및 파일을 전송할때 패킷을 한번에 보내지 않고 나눠서 보내게 되는데 여러 부분으로 나누려면 각 부분의 경계를 표시해야햐며 이 경우 메시지 및 파일의 전송되는 내용을 boundary 값을 구분자로 사용한다.
+
+패킷 :
+
+
+[Multipart 메시지] : https://ko.wikipedia.org/wiki/MIME#Multipart_.EB.A9.94.EC.8B.9C.EC.A7.80
+
+[HTTP multipart/form-data raw 데이터는 어떤 형태일까?] : https://lng1982.tistory.com/209
+
+[Multipart와 Message Content-Type] : http://egloos.zum.com/tequiero35/v/2094266
+
+
+Multipart는 Content-Type 중 하나로 서브 타입으로 mixed, alternative, digest, related를 갖는다.
+
+이는 여려개의 독립된 섹션으로 구성된 데이터를 하나의 메시지로 조합하여 전송한다.
+
+
+메시지는 헤더와 본문으로 구성되고 Null 라인으로 구분한다.
+
+본문은 라인의 집합으로 평면적 구성이므로, 여러 부분으로 나누려면 각 부분의 경계를 표시해야하며, 이것이 Multipart Content-Type의 기본 파라미터가 된다. 이 파라미터는 boundary라 한다.
+
+
+기본 구조
+
+
+Content-Type: multipart/mixed; boundary=gc0p4Jq0M2Yt08j34c0p
+
+
+-boundary
+
+
+boundary로 쓰일수 있는 문자는 ACSII 문자 중에서 일부에 속한다.
