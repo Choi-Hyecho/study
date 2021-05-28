@@ -63,11 +63,16 @@ ch05/OperationEx2.java 예시 참고
 ! (부정) / 단항 연산자로 참을 거짓으로 거짓을 참으로 변경
 
 단락회로평가 (Short circuit evaluation)
+
 논리 곱은 두항이 모두 true일 때만 결과가 true
 -> 앞의 항이 false이면 뒤 항의 결과를 평가하지 않음
 
 논리 합은 두 항이 모두 false일때 결과가 false 
 -> 앞의 항의 true 이면 뒤 항의 결과를 평가하지 않아도 됨. 
-ch05/OperationEx3.java 부호연산자 참고
+
+
+복합 대입 연산자
+조건 연산자
+비트 연산자
 
 
