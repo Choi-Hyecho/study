@@ -3,7 +3,7 @@ package binary;
 
 public class BinaryTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int num = 10;
         int bNum = 0B1010; //10
         int oNum = 012;

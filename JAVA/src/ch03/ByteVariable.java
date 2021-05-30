@@ -1,5 +1,5 @@
-public class ByteVariable{
-    public static void main(String[] args){
+public class ByteVariable {
+    public static void main(String[] args) {
         byte bDate = -128;
         System.out.println(bData);
 

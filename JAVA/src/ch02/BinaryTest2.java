@@ -1,7 +1,7 @@
 package binary;
 
 public class BinaryTest2 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int num1 = 00000000000000000000000000101;
         int num2 = 00111111111111111111111111010;
 
