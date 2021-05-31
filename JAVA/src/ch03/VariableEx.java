@@ -1,7 +1,7 @@
 public class VariableEx {
 
     public static void main(String[] args) {
-        
+
         // 변수 선언
         int num;
         // 오른쪽에 있는 값을 왼쪽에 대입

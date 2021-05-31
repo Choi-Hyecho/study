@@ -6,7 +6,7 @@ public class ExplicitTypeConversion {
         // 형변환 안 됨
         // byte bNum = iNum
 
-        byte bNum = (byte)iNum;
+        byte bNum = (byte) iNum;
         // 1000
         System.out.println(iNum);
         // -24
@@ -16,7 +16,7 @@ public class ExplicitTypeConversion {
         // 데이터를 다 담을 수 없기 때문에 데이터 유실이 일어난다.
 
         double dNum = 3.14;
-        iNum = (int)dNum;
+        iNum = (int) dNum;
 
         // 3
         System.out.println(iNum);
@@ -32,7 +32,7 @@ public class ExplicitTypeConversion {
         // 명시적 형변환 두가지 방법
 
         // 3+0
-        int num1 = (int)dNum + (int)fNum;
+        int num1 = (int) dNum + (int) fNum;
 
         // 3+1
         int num2 = (int) (dNum + fNum);

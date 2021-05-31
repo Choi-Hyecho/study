@@ -1,0 +1,78 @@
+제어 흐름이해하기
+제어문 : 프로그램의 흐름을 컨트롤 하는것
+크게 조건문과 반복문이 있음
+
+조건문
+주어진 조건에 따라 다른 수행문이 실행되도록 프로그래밍 하는 것
+if문 이라고도 함
+
+if문
+if (조건식){
+    수행문;
+}
+
+if - else 문
+if(조건식){
+    수행문1;
+}else{
+    수행문2;
+}
+Ifexample1.java 참고
+
+if-else if-else문
+하나의 경우에 조건이 여러개에 해당하는 경우
+if(조건1){
+    문장1;
+}else if(조건2){
+    문장2;
+}else if(조건3){
+    문장3;
+}else{
+    문장4;
+}
+
+Ifexample2.java 참고
+
+조건문과 조건 연산자
+간단한 if-else 절은 조건이 한가지일 경우
+조건 연산자로 구할 수 있음
+if(a>b)
+    max = a;
+else
+    max = b;
+조건연산자 :  max = (a>b)? a:b;
+
+swich-case문
+조건식의 결과가 정수 또는 문자열의 값이고 그 값에 따라 수행분이 결정될
+때
+if-else if-else문을 대신하여 switch-case 문을 사용할 수 있다.
+조건이 많아지면 코드가 지저분해지고
+조건 블록이 많아지면서 길어짐.
+
+if (rank ==1){
+    madelColor = 'G'
+}else if (rank == 2){
+    madelColor = 'S'
+}else if(rank == 3){
+    madelColor = "B"
+}else{
+    madelColor = "A"
+}
+
+-----------------------
+
+switch(rank){
+    case1 : madelColor = 'G';
+            break;
+    case1 : madelColor = 'G';
+            break;
+    case1 : madelColor = 'G';
+            break;
+    default : madelColor = "A"
+}
+
+SwitchCase1.java 참고
+case문에 문자열 사용하기
+자바 7부터 switch-case 문에 case 값에 문자열 사용가능.
+
+SwitchCase2.java 참고
